@@ -16,15 +16,19 @@ module.exports = {
         }
     },
     "js": {
-        "workflow": "modular",
-        "bundler": "webpack",
+        "workflow": "concat",
+        // "workflow": "modular",
+        // "bundler": "webpack",
+        "bundler": "",
         "lint": true,
         "useBabel": true,
         "removeConsoleLog": true,
         "webpack": {
             "useHMR": false
         },
-        "jsPathsToConcatBeforeModulesJs": [],
+        "jsPathsToConcatBeforeModulesJs": [
+            'markup/static/js/main.js'
+        ],
         "lintJsCodeBeforeModules": false,
         "jsPathsToConcatAfterModulesJs": [],
         "lintJsCodeAfterModules": false
